@@ -554,7 +554,7 @@ for i in syscall_file1:
                     changed_api_list.append(api)
             break # NtAPIs ending in "Ex" will be checked first and break to avoid duplicates
 
-    if i != "":
+    if i != "": # If line doesn't have NtAPI in it write it to output file
         output1.write(i)
 
 output1.close()
@@ -595,11 +595,3 @@ for i in changed_api_list:
         pass
 print("---")
 print("[+] NOTE! You must change the header file reference in your SysWhispers .c file to reflect the new header file name!")
-
-
-
-
-
-
-
-
